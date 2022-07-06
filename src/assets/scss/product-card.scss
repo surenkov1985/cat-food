@@ -1,6 +1,89 @@
 .block {
 	position: relative;
 
+	&.active {
+		& > .card {
+			background: #D91667;
+			border-color: #D91667;
+
+			& > .card__width {
+				background: #D91667!important;
+			}
+
+			&:hover {
+				background: #D91667!important;
+				border-color: #D91667!important;
+			}
+		}
+
+		&.hover {
+
+			&:hover {
+				& .card__description_text {
+					color: #D91667!important;
+				}
+			}
+		}
+
+		& .block__button {
+			display: none!important;
+		}
+	}
+
+	&.disabled {
+		& > .card {
+			background: #B3B3B3;
+			border-color: #B3B3B3;
+			cursor: default;
+
+			& .card__cat {
+				opacity: 0.5;
+			}
+
+			&__text {
+				color: #B3B3B3;
+			}
+
+			& .card__description_text {
+				color: #B3B3B3!important;
+			}
+
+			& .card__title{
+				color: #B3B3B3!important;
+			}
+
+			& .card__subtitle{
+				color: #B3B3B3!important;
+			}
+
+			& > .card__width {
+				background: #B3B3B3!important;
+			}
+
+			&__subpresent {
+				color: #B3B3B3!important;
+			}
+
+			&:hover {
+				background: #B3B3B3!important;
+				border-color: #B3B3B3!important;
+				cursor: default;
+
+				& .card__description_text {
+					color: #B3B3B3!important;
+				}
+			}
+		}
+
+		& .block__text p {
+			color: #FFFF66;
+		}
+
+		& .block__button {
+			display: none!important;
+		}
+	}
+
 	&__card {
 		background: #1698D9;
 		clip-path: polygon(0px 100%, 100% 100%, 100% 0px, 13% 0px, 0px 9%);
@@ -55,6 +138,20 @@
 }
 
 .card {
+	cursor: pointer;
+
+	&:hover {
+		background: #1698D9!important;
+		border-color: #1698D9!important;
+
+		& .card__description_text {
+			color: #666666 !important;
+		}
+
+		& .card__width {
+			background: #1698D9 !important;
+		}
+	}
 
 	&__description {
 
@@ -103,6 +200,12 @@
 	}
 
 	&__present {
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 700;
+		color: #666666;
+	}
+	&__subpresent {
 		font-size: 14px;
 		line-height: 16px;
 		font-weight: 700;
