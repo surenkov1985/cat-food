@@ -1,6 +1,7 @@
 @import "reset";
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200&display=swap');
 @import "product-card";
+@import "ie11-style";
 
 * {
 	font-family: "Trebuchet MS";
@@ -24,15 +25,16 @@ body {
 }
 
 #app {
+	width: 90%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin: auto;
-	padding: 80px 100px;
+	padding: 80px 50px;
 
 	@media (max-width: 1400px) {
+		width: 100%;
 		padding: 80px 50px;
 	}
 }
@@ -57,6 +59,7 @@ body {
 
 .container {
 	display: flex;
+	width: 100%;
 	margin-top: 25px;
 	align-items: flex-start;
 	justify-content: center;
@@ -66,5 +69,6 @@ body {
 	row-gap: 30px;
 	flex-wrap: wrap;
 }
+
 
 

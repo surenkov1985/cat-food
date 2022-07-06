@@ -1,0 +1,125 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+	.block:not(:first-child) {
+		margin: 0px 40px 30px;
+
+		@media (max-width: 1400px) {
+
+		}
+	}
+
+	.block {
+		position: relative;
+
+		&:hover {
+			& > .card {
+				background: #FFFFFF!important;
+				border-color: #1698D9;
+
+				& > .card__width {
+					background: #1698D9!important;
+				}
+			}
+		}
+
+		&.active {
+			& > .card {
+				background: #FFFFFF!important;
+				border-color: #D91667;
+
+				& > .card__width {
+					background: #D91667!important;
+				}
+
+				&:hover {
+					background: #FFFFFF!important;
+					border-color: #D91667!important;
+				}
+			}
+
+			&.hover {
+
+				&:hover {
+					& .card__description_text {
+						color: #D91667!important;
+					}
+				}
+			}
+
+			& .block__button {
+				display: none!important;
+			}
+		}
+
+		&.disabled {
+
+			&:hover {
+				border-color: #B3B3B3 !important;
+				cursor: default;
+			}
+			& > .card {
+				background: #FFFFFF!important;
+				border-color: #B3B3B3;
+				cursor: default;
+
+				& .card__cat {
+					opacity: 0.5;
+				}
+
+				&__text {
+					color: #B3B3B3;
+				}
+
+				& .card__description_text {
+					color: #B3B3B3!important;
+				}
+
+				& .card__title{
+					color: #B3B3B3!important;
+				}
+
+				& .card__subtitle{
+					color: #B3B3B3!important;
+				}
+
+				& > .card__width {
+					background: #B3B3B3!important;
+				}
+
+				&__subpresent {
+					color: #B3B3B3!important;
+				}
+
+				&:hover {
+					background: #FFFFFF!important;
+					border-color: #B3B3B3!important;
+					cursor: default;
+
+					& .card__description_text {
+						color: #B3B3B3!important;
+					}
+				}
+			}
+		}
+
+
+
+
+	}
+
+	.card {
+		background: #FFFFFF;
+
+		&__cat {
+			z-index: 0;
+		}
+
+		&:after {
+		display: none;
+		}
+
+		&:hover {
+			background: #FFFFFF;
+		}
+	}
+}
